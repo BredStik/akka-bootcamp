@@ -32,7 +32,10 @@
             System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.sysChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.addSeriesButton = new System.Windows.Forms.Button();
+            this.cpuToggleButton = new System.Windows.Forms.Button();
+            this.memoryToggleButton = new System.Windows.Forms.Button();
+            this.diskToggleButton = new System.Windows.Forms.Button();
+            this.pauseResumeButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.sysChart)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,23 +56,55 @@
             this.sysChart.TabIndex = 0;
             this.sysChart.Text = "sysChart";
             // 
-            // addSeriesButton
+            // cpuToggleButton
             // 
-            this.addSeriesButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.addSeriesButton.Location = new System.Drawing.Point(597, 411);
-            this.addSeriesButton.Name = "addSeriesButton";
-            this.addSeriesButton.Size = new System.Drawing.Size(75, 23);
-            this.addSeriesButton.TabIndex = 1;
-            this.addSeriesButton.Text = "Add series";
-            this.addSeriesButton.UseVisualStyleBackColor = true;
-            this.addSeriesButton.Click += new System.EventHandler(this.addSeriesButton_Click);
+            this.cpuToggleButton.Location = new System.Drawing.Point(580, 353);
+            this.cpuToggleButton.Name = "cpuToggleButton";
+            this.cpuToggleButton.Size = new System.Drawing.Size(92, 23);
+            this.cpuToggleButton.TabIndex = 1;
+            this.cpuToggleButton.Text = "CPU (OFF)";
+            this.cpuToggleButton.UseVisualStyleBackColor = true;
+            this.cpuToggleButton.Click += new System.EventHandler(this.cpuToggleButton_Click);
+            // 
+            // memoryToggleButton
+            // 
+            this.memoryToggleButton.Location = new System.Drawing.Point(580, 382);
+            this.memoryToggleButton.Name = "memoryToggleButton";
+            this.memoryToggleButton.Size = new System.Drawing.Size(92, 23);
+            this.memoryToggleButton.TabIndex = 1;
+            this.memoryToggleButton.Text = "MEMORY (OFF)";
+            this.memoryToggleButton.UseVisualStyleBackColor = true;
+            this.memoryToggleButton.Click += new System.EventHandler(this.memoryToggleButton_Click);
+            // 
+            // diskToggleButton
+            // 
+            this.diskToggleButton.Location = new System.Drawing.Point(580, 411);
+            this.diskToggleButton.Name = "diskToggleButton";
+            this.diskToggleButton.Size = new System.Drawing.Size(92, 23);
+            this.diskToggleButton.TabIndex = 1;
+            this.diskToggleButton.Text = "DISK (OFF)";
+            this.diskToggleButton.UseVisualStyleBackColor = true;
+            this.diskToggleButton.Click += new System.EventHandler(this.diskToggleButton_Click);
+            // 
+            // pauseResumeButton
+            // 
+            this.pauseResumeButton.Location = new System.Drawing.Point(580, 324);
+            this.pauseResumeButton.Name = "pauseResumeButton";
+            this.pauseResumeButton.Size = new System.Drawing.Size(92, 23);
+            this.pauseResumeButton.TabIndex = 1;
+            this.pauseResumeButton.Text = "PAUSE ||";
+            this.pauseResumeButton.UseVisualStyleBackColor = true;
+            this.pauseResumeButton.Click += new System.EventHandler(this.pauseResumeButton_Click);
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(684, 446);
-            this.Controls.Add(this.addSeriesButton);
+            this.Controls.Add(this.diskToggleButton);
+            this.Controls.Add(this.memoryToggleButton);
+            this.Controls.Add(this.pauseResumeButton);
+            this.Controls.Add(this.cpuToggleButton);
             this.Controls.Add(this.sysChart);
             this.Name = "Main";
             this.Text = "System Metrics";
@@ -83,7 +118,10 @@
         #endregion
 
         private System.Windows.Forms.DataVisualization.Charting.Chart sysChart;
-        private System.Windows.Forms.Button addSeriesButton;
+        private System.Windows.Forms.Button cpuToggleButton;
+        private System.Windows.Forms.Button memoryToggleButton;
+        private System.Windows.Forms.Button diskToggleButton;
+        private System.Windows.Forms.Button pauseResumeButton;
     }
 }
 
